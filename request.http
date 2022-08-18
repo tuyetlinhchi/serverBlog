@@ -1,0 +1,66 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "jimmm@",
+  "email": "jimm@gmail.com",
+  "password": "jimm"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "identify": "jim",
+
+  "password": "jim"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmNjNGM2ZTVmMjkzZGU0M2M4MmZhNTYiLCJpYXQiOjE2NTc2MTIzMTV9.HriRSLK4uFzjXCIRj7joeCuZiDdxBpoXonrHLwZDNfI
+
+{
+  "title": "React",
+  "content": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmNjNGM2ZTVmMjkzZGU0M2M4MmZhNTYiLCJpYXQiOjE2NTc2MTIzMTV9.HriRSLK4uFzjXCIRj7joeCuZiDdxBpoXonrHLwZDNfI",
+  "publish": false
+}
+
+###
+POST http://localhost:5000/api/images
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmNjNGM2ZTVmMjkzZGU0M2M4MmZhNTYiLCJpYXQiOjE2NTc2MTIzMTV9.HriRSLK4uFzjXCIRj7joeCuZiDdxBpoXonrHLwZDNfI
+
+{
+  img: "filePath"
+}
+
+###
+GET http://localhost:5000/api/posts
+
+###
+GET http://localhost:5000/api/posts/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmNjNGM2ZTVmMjkzZGU0M2M4MmZhNTYiLCJpYXQiOjE2NTc4MTczNjB9.WuIEqmVDklyCOSDgknF9pTDxWo_wgKpnHrtjnferKPk
+
+###
+GET http://localhost:5000/api/images/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmNjNGM2ZTVmMjkzZGU0M2M4MmZhNTYiLCJpYXQiOjE2NTc4MTczNjB9.WuIEqmVDklyCOSDgknF9pTDxWo_wgKpnHrtjnferKPk
+
+###
+
+PUT http://localhost:5000/api/posts/6061c25ac2533d41dcae2b19
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTcwMTk3ODF9.ri-nHdgZc1VQTocFLfMgF4_PhFf2TeUVqXLd8tpOkeA
+
+{
+  "title": "React",
+  "content": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmNjNGM2ZTVmMjkzZGU0M2M4MmZhNTYiLCJpYXQiOjE2NTc2MTIzMTV9.HriRSLK4uFzjXCIRj7joeCuZiDdxBpoXonrHLwZDNfI",
+  "publish": false
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/6061c25ac2533d41dcae2b19
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTcwMTk3ODF9.ri-nHdgZc1VQTocFLfMgF4_PhFf2TeUVqXLd8tpOkeA
