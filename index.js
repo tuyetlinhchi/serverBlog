@@ -6,7 +6,6 @@ const posts = require("./routes/post");
 const images = require("./routes/image");
 const cors = require("cors");
 const helmet = require("helmet");
-const compression = require("compression");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,7 +13,6 @@ const MONGODB_URL = process.env.MONGODB_URL;
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
-app.use(compression);
 
 const connectMongo = async () => {
   try {
